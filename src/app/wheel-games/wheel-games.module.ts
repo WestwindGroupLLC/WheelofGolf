@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { WheelGamesPageRoutingModule } from './wheel-games-routing.module';
 
 import { WheelGamesPage } from './wheel-games.page';
+import { WheelSpinnerComponent } from '../wheel-spinner/wheel-spinner.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { WheelGamesPage } from './wheel-games.page';
     IonicModule,
     WheelGamesPageRoutingModule
   ],
-  declarations: [WheelGamesPage]
+  declarations: [WheelGamesPage, WheelSpinnerComponent]
 })
 export class WheelGamesPageModule {}

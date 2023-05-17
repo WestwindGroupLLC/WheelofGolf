@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { SignupComponent } from './signup/signup.component';
+//import { SignupComponent } from './signup/signup.component';
+//temporarily bypassing sign up
+import { WheelGamesPage } from './wheel-games/wheel-games.page';
 
 const routes: Routes = [
   // Other existing routes
-  { path: 'signup', component: SignupComponent},
+  //{ path: 'signup', component: SignupComponent},
   {
     path: '',
     redirectTo: 'welcome',
@@ -23,8 +25,10 @@ const routes: Routes = [
     loadChildren: () => import('./Login/login.module').then( m => m.LoginPageModule)
   },
   {
+    //put back in the loadchildren page
     path: 'wheel-games',
-    loadChildren: () => import('./wheel-games/wheel-games.module').then( m => m.WheelGamesPageModule)
+    component: WheelGamesPage
+    //loadChildren: () => import('./wheel-games/wheel-games.module').then( m => m.WheelGamesPageModule)
   },
   {
     path: 'account',

@@ -1,3 +1,16 @@
-<p>
-  wheel-spinner works!
-</p>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Wheel Spinner</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <div class="spinner-result" *ngIf="selectedOption">
+      <p>You spun: {{ selectedOption }}</p>
+    </div>
+    <div class="spinner-options" *ngIf="!selectedOption">
+      <ion-button expand="full" (click)="spinWheel()">Spin the Wheel</ion-button>
+    </div>
+    <div #wheelContainer></div>
+<button id="spinButton">Spin</button>
+
+  </ion-card-content>
+</ion-card>
