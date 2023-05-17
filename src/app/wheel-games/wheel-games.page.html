@@ -5,10 +5,10 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <app-wheel-spinner [options]="wheelOptions" (spinCompleted)="onSpinCompleted($event)"></app-wheel-spinner><ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">wheel-games</ion-title>
     </ion-toolbar>
   </ion-header>
 </ion-content>
-<app-wheel-spinner [options]="wheelOptions" (spinCompleted)="onSpinCompleted($event)"></app-wheel-spinner>
+

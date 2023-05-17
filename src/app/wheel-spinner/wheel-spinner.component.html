@@ -12,5 +12,20 @@
     <div #wheelContainer></div>
 <button id="spinButton">Spin</button>
 
+<div class="wheel-container">
+  <div class="wheel" [style.transform]="'rotate(' + rotationAngle + 'deg)'">
+    <div *ngFor="let option of options" class="segment" [style.background]="getSegmentColor(option)">{{ option }}</div>
+  </div>
+  <div class="controls">
+    <button class="btn btn-primary" [disabled]="isSpinning" (click)="spinWheel()">Spin</button>
+    <button class="btn btn-secondary" [disabled]="!isSpinning" (click)="respinWheel()">Respin</button>
+    <button class="btn btn-secondary" (click)="resetWheel()">Reset</button>
+  </div>
+</div>
+
+
+
+
+
   </ion-card-content>
 </ion-card>

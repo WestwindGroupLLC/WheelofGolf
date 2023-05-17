@@ -12,15 +12,15 @@ const routes: Routes = [
         loadChildren: () => import('../welcome/welcome.module').then(m => m.WelcomePageModule)
       },
       {
-        path: 'tab1',
+        path: 'Wheel Games',
         loadChildren: () => import('../wheel-games/wheel-games.module').then(m => m.WheelGamesPageModule)
       },
       {
-        path: 'tab2',
+        path: 'Login',
         loadChildren: () => import('../Login/login.module').then(m => m.LoginPageModule)
       },
       {
-        path: 'tab3',
+        path: 'Account',
         loadChildren: () => import('../account/account.module').then(m => m.AccountPageModule)
       },
       {

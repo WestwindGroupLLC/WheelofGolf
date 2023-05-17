@@ -7,10 +7,17 @@ import { Component } from '@angular/core';
 })
 export class WheelGamesPage {
   wheelOptions: string[] = [
-    'Option 1', 
-    'Option 2', 
-    'Option 3', 
-    'Option 4',]; // Array of wheel options
+    'Hit 3 Iron', 
+    'Hit 4 Iron', 
+    'Hit 5 Iron', 
+    'Hit 6 Iron',
+    'Hit 7 Iron',
+    'Hit 8 Iron',
+    'Hit 9 Iron',
+    'Hit Wedge',
+    'Use Putter',
+    'Driver Only',
+    'Fairway Wood Only'  ]; // Array of wheel options
   selectedOption: string = ''; // Variable to store the selected option
 
   constructor() {}
