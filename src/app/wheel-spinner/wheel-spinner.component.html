@@ -1,31 +1,23 @@
 <ion-card>
   <ion-card-header>
-    <ion-card-title>Wheel Spinner</ion-card-title>
+    <ion-card-title>Choose A Club</ion-card-title>
   </ion-card-header>
-  <ion-card-content>
-    <div class="spinner-result" *ngIf="selectedOption">
-      <p>You spun: {{ selectedOption }}</p>
+  
+      <ion-loading *ngIf="isSpinning" message="Loading..." spinner="circles"></ion-loading>
+    <div class="wheel" [style.transform]="'rotate(' + rotationAngle + 'deg)'" *ngIf="!isSpinning">
+      <div *ngFor="let option of options" class="segment" [style.background]="getSegmentColor(option)">
+        {{ option }}
+      </div>
     </div>
-    <div class="spinner-options" *ngIf="!selectedOption">
-      <ion-button expand="full" (click)="spinWheel()">Spin the Wheel</ion-button>
+    
+    <div class="buttons">
+      <button class="btn btn-primary" [disabled]="isSpinning" (click)="spinWheel()">Spin</button>
+      <button class="btn btn-secondary" [disabled]="!isSpinning" (click)="respinWheel()">Respin</button>
+      <button class="btn btn-secondary" (click)="resetWheel()">Reset</button>
     </div>
-    <div #wheelContainer></div>
-<button id="spinButton">Spin</button>
-
-<div class="wheel-container">
-  <div class="wheel" [style.transform]="'rotate(' + rotationAngle + 'deg)'">
-    <div *ngFor="let option of options" class="segment" [style.background]="getSegmentColor(option)">{{ option }}</div>
-  </div>
-  <div class="controls">
-    <button class="btn btn-primary" [disabled]="isSpinning" (click)="spinWheel()">Spin</button>
-    <button class="btn btn-secondary" [disabled]="!isSpinning" (click)="respinWheel()">Respin</button>
-    <button class="btn btn-secondary" (click)="resetWheel()">Reset</button>
-  </div>
-</div>
-
-
-
-
-
-  </ion-card-content>
+    
+    <div *ngIf="!isSpinning && selectedOption" class="selected-option">
+      Selected Option: {{ selectedOption }}
+    </div>
+     
 </ion-card>

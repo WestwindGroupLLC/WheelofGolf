@@ -1,14 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>wheel-games</ion-title>
+    <ion-title>Wheels of Golf</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <app-wheel-spinner [options]="wheelOptions" (spinCompleted)="onSpinCompleted($event)"></app-wheel-spinner><ion-header collapse="condense">
+  <app-wheel-spinner (spinCompleted)="onSpinCompleted($event)"></app-wheel-spinner>
     <ion-toolbar>
       <ion-title size="large">wheel-games</ion-title>
     </ion-toolbar>
-  </ion-header>
-</ion-content>
+  </ion-content>
 
