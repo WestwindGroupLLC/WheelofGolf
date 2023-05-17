@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-//import { SignupComponent } from './signup/signup.component';
-//temporarily bypassing sign up
+import { SignupComponent } from './signup/signup.component'; //temporarily bypassing sign up
+
 import { WheelGamesPage } from './wheel-games/wheel-games.page';
 
 const routes: Routes = [
   // Other existing routes
-  //{ path: 'signup', component: SignupComponent},
+  { path: 'signup', component: SignupComponent},
   {
     path: '',
     redirectTo: 'welcome',

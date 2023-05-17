@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .welcome-message {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .welcome-message h1 {
+    font-size: 24px;
+  }
+  
+  .wheel-lines {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to right, #000 0%, #000 50%, transparent 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: -100% 0%;
+    }
+  }
+  
