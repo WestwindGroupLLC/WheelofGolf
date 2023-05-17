@@ -1,0 +1,7 @@
+{
+  "name": "Wheel-of-Golf",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
