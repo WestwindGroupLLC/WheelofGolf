@@ -1,0 +1,50 @@
+<!--ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Welcome to the Dashboard</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <img alt="wheel of golf" src="assets/Wheel.jpg" width="100" height="100">
+    <ion-card-header>
+      <ion-card-title>Wheel Games</ion-card-title>
+      <ion-card-subtitle>Try your luck at the Wheel of Golf</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Here are the wheel your have loaded
+    </ion-card-content>
+      <ion-button color="primary" (click)="goToWheelGamesPage()">
+      <ion-icon name="logo-instagram"></ion-icon>
+     Play</ion-button>
+    
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-button expand="full" color="danger" disabled>
+        <ion-icon name="camera-outline"></ion-icon>
+        Open Camera
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-button expand="full" color="tertiary" disabled>
+        <ion-icon name="share-outline"></ion-icon>
+        Share Your Wheel
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+
+

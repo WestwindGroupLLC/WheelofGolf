@@ -1,39 +1,32 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { SignupComponent } from './signup/signup.component'; //temporarily bypassing sign up
-
 import { WheelGamesPage } from './wheel-games/wheel-games.page';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './Login/login.component';
 
 const routes: Routes = [
   // Other existing routes
   { path: 'signup', component: SignupComponent},
-  {
-    path: '',
+  { path: '',
     redirectTo: 'welcome',
-    pathMatch: 'full',
-  },
-  {
-    path: '',
+    pathMatch: 'full',},
+  
+    {path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },
-  {
-    path: 'welcome',
+    },
+    {path: 'welcome',
     loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
-  },
-  {
-    path: 'login',
-    loadChildren: () => import('./Login/login.module').then( m => m.LoginPageModule)
-  },
-  {
+    },
+    {path: 'login', component: LoginComponent},
+    { path: 'home', component: HomeComponent},
+    { path: 'wheel-games', component: WheelGamesPage},
     //put back in the loadchildren page
-    path: 'wheel-games',
-    component: WheelGamesPage
-    //loadChildren: () => import('./wheel-games/wheel-games.module').then( m => m.WheelGamesPageModule)
-  },
-  {
-    path: 'account',
+        //loadChildren: () => import('./wheel-games/wheel-games.module').then( m => m.WheelGamesPageModule)
+    
+    {path: 'account',
     loadChildren: () => import('./account/account.module').then( m => m.AccountPageModule)
-  }
+    }
 ];
 @NgModule({
   imports: [

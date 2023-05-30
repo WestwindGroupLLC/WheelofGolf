@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+import { HomeComponent } from '../home/home.component';
+import { TabsPageModule } from './tabs.module';
+
 
 const routes: Routes = [
   {
@@ -22,6 +25,9 @@ const routes: Routes = [
       {
         path: 'Account',
         loadChildren: () => import('../account/account.module').then(m => m.AccountPageModule)
+      },
+      {
+        path: 'home', component: HomeComponent
       },
       {
         path: '',
